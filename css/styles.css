@@ -6,8 +6,9 @@ h1{
 }
 .dice2{
   float: right;
-  padding-right: 30%;
+  padding-right: 20%;
   padding-top: 10%;
+
 }
 .dice1{
   float: left;
@@ -17,4 +18,9 @@ h1{
 }
 p{
   padding-bottom: 30%;
+}
+button{
+  display: inline;
+  padding: 5px;
+  margin: 5px;
 }
