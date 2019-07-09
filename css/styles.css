@@ -1,0 +1,20 @@
+body{
+  padding: 20px;
+}
+h1{
+  text-align: center;
+}
+.dice2{
+  float: right;
+  padding-right: 30%;
+  padding-top: 10%;
+}
+.dice1{
+  float: left;
+  padding-left: 10%;
+  padding-top: 10%
+
+}
+p{
+  padding-bottom: 30%;
+}
