@@ -1,26 +1,35 @@
 function Game(player1, player2, score){
   this.player1 = player1;
   this.player2 = player2;
-  this.score = score;
+  this.score = 0;
 
 }
 
 Game.prototype.roll = function(){
 
-    var dice = Math.floor(Math.random() * 6) + 1;
-    var score = [];
-    console.log(dice);
-  }
+  var dice = Math.floor(Math.random() * 6) + 1;
+  var score = dice + dice;
+  console.log(dice);
 
-    // if (dice === 1) {
-    //   return "Game Over"
-    // } else{
-    //   this.score.push(dice);
-    //
-    // }
+  if (dice === 1){
+    alert ("You lost! Sorry");
+  }else {
+    alert(score);
+  }
+}
+
+// if (dice === 1) {
+//   return "Game Over"
+// } else{
+//   this.score.push(dice);
+//
+// }
 
 Game.prototype.stop = function(){
-  this.score = 1;
+  if (this.score === 1){
+    return "Sorry! you lost"
+  };
+
 }
 
 Game.prototype.win = function(){
@@ -42,8 +51,12 @@ $(document).ready(function(){
 
   });
 
-  $('#play1').click(function(){
+  $('#play1, #play2').click(function(){
     newGame.roll();
-  })
+  });
+
+  $('#stop').click(function(){
+    newGame.stop();
+  });
 
 });
