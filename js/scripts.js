@@ -10,10 +10,15 @@ Game.prototype.roll = function() {
 
   var dice = Math.floor(Math.random() * 6) + 1;
   this.player1score += dice;
-  this.player2score += dice;
+
+  var dice2 = Math.floor(Math.random() * 5) + 1;
+  this.player2score += dice2;
+  console.log(dice, dice2);
 
   if (dice === 1){
-    alert ("You lost! Sorry");
+    return this.player1score = 0, this.player2score = 0;
+
+
   }
 }
 
@@ -29,8 +34,8 @@ Game.prototype.stop= function(){
 }
 
 Game.prototype.win = function(){
-  if(this.player1score >= 100){
-    return "Victory! Congratulations"
+  if(this.score >= 100){
+    return "You Won! Congratulations"
   }
 }
 
@@ -51,7 +56,7 @@ $(document).ready(function(){
     $('.points1').text(newGame.player1score);
 
   });
-  
+
   $('#play2').click(function(){
     newGame.roll();
     newGame.win();
