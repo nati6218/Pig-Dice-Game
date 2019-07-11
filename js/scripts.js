@@ -16,6 +16,7 @@ Game.prototype.roll = function() {
   console.log(dice, dice2);
 
   if (dice === 1){
+    alert('sorry, you lost');
     return this.player1score = 0, this.player2score = 0;
 
 
